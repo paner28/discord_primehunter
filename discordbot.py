@@ -16,7 +16,7 @@ async def on_message(message):
     if message.author.bot:
         return
     else:
-        await channel.send(str(4) + "=" + str(sympy.factorint(int(4))))
         await message.channel.send('にゃーん')
+        await channel.send(str(4) + "=" + str(sympy.factorint(int(4))))
 
 client.run(TOKEN)
