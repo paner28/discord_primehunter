@@ -136,9 +136,14 @@ async def fx(n):
     for i in range(n):
         if nk[i] == 14:
             nk[i] = -1
-            for j in range(1,14):
-                data.num[i] = j
-                await fx(n)
+            if i == 0:
+                for j in range(1,14):
+                    data.num[i] = j
+                    await fx(n)
+            else:
+                for j in range(0,14):
+                    data.num[i] = j
+                    await fx(n)
             nk[i] = 14
             return
         elif nk[i] == -1:
@@ -182,9 +187,14 @@ async def fxa(n):
     for i in range(n):
         if nk[i] == 14:
             nk[i] = -1
-            for j in range(1,14):
-                data.num[i] = j
-                await fxa(n)
+            if i == 0:
+                for j in range(1,14):
+                    data.num[i] = j
+                    await fxa(n)
+            else:
+                for j in range(0,14):
+                    data.num[i] = j
+                    await fxa(n)
             nk[i] = 14
             return
         elif nk[i] == -1:
