@@ -18,14 +18,14 @@ class data:
 
 @client.event
 async def on_ready():
-    bot_channel = client.get_channel(701367378386223114)
+    bot_channel = client.get_channel(701731353783304225)
     await bot_channel.send("server start!")
     print("server start!")
 
 @client.event
 async def on_message(message):
     global channel,pl
-    channel = client.get_channel(685797761290993681)
+    channel = client.get_channel(701731410087772251)
     pl = []
     if message.channel.name == "素数判定":
         if message.author.bot:
